@@ -9,7 +9,13 @@
 <body>
 <h1>Hello</h1>	
 	
-	<p>Date: <input type="text" id="datepicker"></p>
+	<form id="form">
+	
+	<p><label for="nom">Nom: </label><input id="nom" name="nom" type="text" placeholder="Nom"></p>
+	
+	<p><label for="prenom">Prénom: </label><input id="prenom" name="prenom" type="text" placeholder="Prenom"></p>
+	
+	<p>Date de naissance: <input type="text" id="datepicker"></p>
 	
 	<hr>
 	
@@ -22,10 +28,39 @@
 	
 	<input id="cp" placeholder="Code Postal"> 
 	<input id="ville" placeholder="Ville">
+	<hr>
+	
+	<div>
+		<input id="email" placeholder="Email" data-validetta="required,email">
+	</div>
+	
+	<br>
+	
+	<div>
+	<input id="mdp" name="mdp" placeholder="Mot de passe" data-validetta="required,minLength[6]">
+	
+	<input id="mdp2" name="mdp2" placeholder="Confirmez votre mot de passe" data-validetta="required,equalTo[mdp]">
+	</div>
+	
+	<br>
+	
+	<div>
+		<select multiple data-validetta="minSelected[2]">
+
+			<option>Conditions 1</option>
+			<option>Conditions 2</option>
+
+		</select>
+	</div>
+	<br>
+	<button type="submit">Valider</button>
+	</form>
 	
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/validetta.min.js"></script>
+<script src="js/validettaLang-fr-FR.js"></script>
 <script src="js/script.js"></script>		
 </body>
 </html>

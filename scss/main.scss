@@ -1,5 +1,6 @@
 @import "custom";
 @import "bootstrap";
+@import "validetta";
 
 body{
 	background-color: $green;
@@ -7,4 +8,13 @@ body{
 
 input{
 	width: 250px;
+	border-radius: 5px;
+	border: solid white;
+}
+
+form{
+	background-color: $red;
+	border: solid $blue 5px;
+	padding: 20px;
+	width: 50%;
 }

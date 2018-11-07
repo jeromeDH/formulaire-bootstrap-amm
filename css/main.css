@@ -6312,8 +6312,49 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+.validetta-bubble {
+  position: absolute;
+  background-color: #cd2e26;
+  max-width: 325px;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 12px;
+  z-index: 9; }
+  .validetta-bubble:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 0;
+    border-width: 5px;
+    border-style: solid; }
+  .validetta-bubble--right:before {
+    top: 7px;
+    left: -10px;
+    border-color: transparent #cd2e26 transparent transparent; }
+  .validetta-bubble--bottom:before {
+    top: -10px;
+    left: 10px;
+    border-color: transparent transparent #cd2e26 transparent; }
+
+.validetta-inline,
+.validetta-bubble {
+  display: block;
+  font: 12px/14px Arial, Helvetica, sans-serif; }
+
+.validetta-inline {
+  color: #cd2e26; }
+
 body {
   background-color: #badc58; }
 
 input {
-  width: 250px; }
+  width: 250px;
+  border-radius: 5px;
+  border: solid white; }
+
+form {
+  background-color: #ff7979;
+  border: solid #686de0 5px;
+  padding: 20px;
+  width: 50%; }
